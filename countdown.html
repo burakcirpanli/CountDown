@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>CountDown Game</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    h3{
+        font-size: 30px;
+    }
+
+    p{
+        font-size: 20px;
+    }
+
+    ol{
+        font-size: 20px;
+    }
+    body {
+            background-color:bisque;
+        }
+    .navigation-buttons {
+        text-align: center;
+    }
+
+    .SubjectHeader{
+        display: inline-block;
+        padding: 5px 10px;
+        margin: 10px;
+        background-color: crimson;
+        color: white;
+        text-decoration: none;
+        border: 3px solid white;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .navigation-button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    h1 {
+            text-align: center;
+            border: 5px solid #4CAF50; 
+            padding: 5px; 
+            color:black; 
+            display: inline-block; 
+            margin: 0;
+            background-color: crimson;
+            color: #4CAF50;
+        }
+
+
+    .image-container {
+            text-align: center; 
+        }
+
+        img {
+            margin-left: 10px; 
+        }
+        .page {
+            display: none;
+        }
+
+        .carousel-container {
+    max-width: 600px; 
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+}
+
+.carousel-slide img {
+    width: 90%;
+    height: auto;
+    border: 8px solid #4CAF50;
+    border-radius: 3px;
+
+}
+
+.carousel-prev,
+.carousel-next {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.carousel-prev {
+    float: left;
+}
+
+.carousel-next {
+    float: right;
+}
+
+.texts {
+    margin-left: 4em;
+}
+
+.creaters{
+    width:100%;
+    padding: 1em;
+}
+
+.no{
+    text-align: right;
+    width: 50%;
+}
+
+.name{
+    text-align: left;
+}
+
+</style>
+</head>
+<body >
+
+<div style="padding: 1em; text-align: center; background-color: rgb(182, 225, 172);"> <h1>COUNTDOWN GAME</h1></div>
+<hr>
+</br>
+<div class="carousel-container">
+        <div class="carousel-slide" id="slide1">
+            <img src="1.jpg" alt="1. Sayfa">
+        </div>
+        <div class="carousel-slide" id="slide2">
+            <img src="2.jpg" alt="2. Sayfa">
+        </div>
+        <div class="carousel-slide" id="slide3">
+            <img src="3.jpg" alt="3. Sayfa">
+        </div>
+        <div class="carousel-slide" id="slide3">
+            <img src="4.jpg" alt="4. Sayfa">
+        </div>
+        <div class="carousel-slide" id="slide3">
+            <img src="5.jpg" alt="5. Sayfa">
+        </div>
+        <div class="carousel-slide" id="slide3">
+            <img src="6.jpg" alt="6. Sayfa">
+        </div>
+
+
+
+    <button class="carousel-prev" onclick="sayfaDegistir(-1)">PREV</button>
+    <button class="carousel-next" onclick="sayfaDegistir(1)">NEXT</button>
+</div>
+
+
+
+<br>
+<div class="navigation-buttons">
+    <button class="SubjectHeader" onclick="scrollToWhatisCountdown()">WHAT IS COUNTDOWN</button>
+    <button class="SubjectHeader" onclick="scrollToWhatisTheObjectiveOfTheGame()">WHAT IS THE OBJECTIVE OF THE GAME?</button>
+    <button class="SubjectHeader" onclick="scrollToGameRules()">GAME RULES</button>
+    <button class="SubjectHeader" onclick="scrollToHowToPlayTheGame()">HOW TO PLAY THE GAME?</button>
+
+</div>
+
+<hr>
+<div class="texts">
+        <h3 id="COUNTDOWN" style="color: crimson;">WHAT IS COUNTDOWN ?</h3>
+        <p>
+        Our game is a game in which our player <b>'P'</b> tries to score points by smashing numbers on a <strong>23*53</strong> playing field.
+    </p>
+    <hr>
+    <div>
+        <h3 id="OBJECTIVE" style="color: crimson;">WHAT IS THE OBJECTIVE OF THE GAME?</h3>
+        <p>
+        The aim of our game is to get the highest score possible before <strong>'P'</strong> runs out of lives.
+        </p>
+        </h3>
+    </div>
+    
+    <hr>
+    <div>
+        <h3 id="RULES" style="color: crimson;">GAME RULES</h3>
+        <p>
+        <ol>
+            <li><b>P</b> <u>cannot</u> push increasing numbers.</li>
+            <li>If there is <u>only</u> one number between <b>P</b> and the wall,</br> <b>P</b> <u>cannot</u> smash the number.</li>
+            <li>For each number disappearing from the screen, a new</br> number appears, which is initially displayed in <mark>yellow</mark>.</li>
+            <li>Numbers decrease by <b>1</b> every <b>15</b> seconds.</li>
+            <li>There is a <b>%3</b> chance that <b>1</b> will turn into <b>0</b>.</li>
+            <li><b>0</b> moves randomly. If, during one of its moves,</br> it lands on the player, the player loses one life.</li>
+            <li><b>P</b> starts with <b>5</b> lives. The game ends when <b>P</b> runs out </br>of lives.</li>
+        </ol>
+    </p>
+</div>
+    
+    
+    <hr>
+    <div>
+        <h3 id="HOW" style="color: crimson;">HOW TO PLAY THE GAME?</h3>
+        <video src="oyun.mp4" width="500px" controls ></video>
+
+
+</div>
+
+
+    <HR>
+<div>
+    <a  href="Program.cs" download target="_blank">Game Link</a>
+</div>
+<hr>
+            <table class="creaters">
+                <tr>
+                    <td class="no">2020510211 - </td> <td class="name"> Mehmet Çalıkoğku</td>
+                </tr>
+                <tr>
+                    <td class="no">2022510120 - </td> <td class="name">Edanur Gök</td>
+                </tr>
+                <tr>
+                    <td class="no">2022510165 - </td> <td class="name">Faruk Çelik</td>
+                </tr>
+                <tr>
+                    <td class="no">2022510169 - </td> <td class="name">Burak Çırpanlı</td>
+                </tr>
+                <tr>
+                    <td class="no">2022510175 - </td> <td class="name">Yasin Şahin</td>
+                </tr>
+                <tr>
+                    <td class="no">2023510055 - </td> <td class="name">Seyedradin Hashemifard</td>
+                </tr>
+            </table>
+    <div >
+        <div class="image-container">
+        <img src="deü.jpg" alt="DokuzEylulUniversity" usemap="#üni" width="100" height="90">
+        <map name="üni" >
+            <area shape="rect" coords="5,10,202,292" href="https://www.deu.edu.tr/" target="_blank">
+        </map>
+    
+        <img src="müh.jpg" alt="Dokuz Eylül University Faculty of Engineering" usemap="#müh" width="100" height="90">
+        <map name="müh" >
+            <area shape="rect" coords="10,15,120,202,292" href="https://eng.deu.edu.tr/tr/" target="_blank" >
+        </map>
+        
+        
+        <img src="ceng.jpg" alt="Dokuz Eylül University Computer Engineering" usemap="#ceng" width="100" height="90">
+       <map name="ceng">
+        <area shape="rect" coords="15,20,202,292" href="https://ceng.deu.edu.tr/" target="_blank" >
+       </map>
+       
+    </div>
+    
+
+
+    <script>
+        function showPage(pageId) {
+            var pages = document.querySelectorAll('.page');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].style.display = 'none';
+            }
+    
+            document.getElementById(pageId).style.display = 'block';
+        }
+        </script>
+        <script>
+    
+        var mevcutSayfa = 1;
+        
+    
+        function sayfaGoster(n) {
+            var sayfalar = document.querySelectorAll('.carousel-slide');
+            if (n > sayfalar.length) {
+                mevcutSayfa = sayfalar.length;
+            }
+            if (n < 1) {
+                mevcutSayfa = 1;
+            }
+    
+            for (var i = 0; i < sayfalar.length; i++) {
+                sayfalar[i].style.display = 'none';
+            }
+    
+            sayfalar[mevcutSayfa - 1].style.display = 'block';
+        }
+    
+        function sayfaDegistir(n) {
+            sayfaGoster(mevcutSayfa += n);
+        }
+    
+        
+        sayfaGoster(mevcutSayfa);
+    </script>
+    
+    <script>
+        function scrollToWhatisCountdown() {
+            var element = document.getElementById("COUNTDOWN");
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        function scrollToWhatisTheObjectiveOfTheGame() {
+            var element = document.getElementById("OBJECTIVE");
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        function scrollToGameRules() {
+            var element = document.getElementById("RULES");
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        function scrollToHowToPlayTheGame() {
+            var element = document.getElementById("HOW");
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    </script>
+
+
+</body>
+
+
+
+
+
+
+</html>
